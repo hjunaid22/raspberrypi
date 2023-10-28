@@ -7,6 +7,7 @@ echo "alias='ls -al'" >> /etc/profile
 
 ######
 touch /home/h.junaid/.credentials
+echo "username=download" >> /home/h.junaid/.credentials
 chmod 600
 sudo mkdir /backup
 sudo echo "//192.168.1.5/Open_Share /backup cifs credentials=/home/h.junaid/.credentials,rw,uid=1001,gid=1001" >> /etc/fstab
