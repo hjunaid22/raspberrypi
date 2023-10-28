@@ -1,0 +1,51 @@
+version: '3'
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer
+    restart: always
+    ports:
+      - "9000:9000/tcp"
+      - "8000:8000/tcp"
+    environment:
+      - TZ=America/New_York
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/portainer:/data
+  homeassistant:
+    container_name: homeassistant
+    image: "homeassistant/home-assistant:stable"
+    ports:
+      - "8124:8123/tcp"
+    volumes:
+      - /opt/homeassistant/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+  duplicati:
+    image: "linuxserver/duplicati:latest"
+    container_name: duplicati
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+      - CLI_ARGS= #optional
+    volumes:
+      - /opt/duplicati/config:/config
+      - /opt/backups:/backups
+      - /opt:/opt
+    ports:
+      - 8200:8200
+    restart: unless-stopped
+  esphome:
+    container_name: esphome
+    image: esphome/esphome
+    volumes:
+      - /opt/esphome/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "6052:6052/tcp"
+    restart: always
+    privileged: true
+    network_mode: host
