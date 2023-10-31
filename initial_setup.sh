@@ -13,3 +13,4 @@ sudo mkdir /backup
 sudo echo "//192.168.1.5/Open_Share /backup cifs credentials=/home/h.junaid/.credentials,rw,uid=1001,gid=1001" >> /etc/fstab
 sudo groupadd admin
 sudo usermod -aG admin h.junaid
+######## Adding hostname ####
