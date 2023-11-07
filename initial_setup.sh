@@ -1,9 +1,10 @@
 #!/bin/bash
+echo "what would you like to call this host"
+read "hostname"
+
 echo "alias='ls -al'" >> /etc/profile
-######## installing cifscloak:- cifs share encryption ###########
-#sudo apt install python3-pip -y
-#sudo pip3 install git+https://github.com/sudoofus/cifscloak.git --break-system-packages
-#sudo python3 -m pip install cifscloak
+######## installing Packages ###########
+sudo apt-get install dnsutils #nslookup and dig
 
 ######
 touch /home/h.junaid/.credentials
