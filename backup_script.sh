@@ -2,7 +2,7 @@
 
 # Set variables
 SOURCE_DIRS=("/opt" "/var/www/html" "/etc/fstab")
-BACKUP_DIR="/backup/backup/RaspberryPI_HA"
+BACKUP_DIR="/backup/backup/Raspberry_PI_HA"
 MAX_BACKUPS=5
 
 # Create backup directory if it doesn't exist
