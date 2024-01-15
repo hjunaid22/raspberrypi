@@ -6,7 +6,7 @@ echo "alias ll=ls -al" >> /etc/profile
 ######## installing Packages ###########
 sudo apt-get install dnsutils #nslookup and dig
 sudo apt-get install apache2
-######
+###### setup smb share to Synology ##########
 touch /home/h.junaid/.credentials
 echo "username=download" >> /home/h.junaid/.credentials
 chmod 600
