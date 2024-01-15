@@ -2,7 +2,7 @@
 echo "what would you like to call this host"
 read "hostname"
 
-echo "alias='ls -al'" >> /etc/profile
+echo "alias ll=ls -al" >> /etc/profile
 ######## installing Packages ###########
 sudo apt-get install dnsutils #nslookup and dig
 sudo apt-get install apache2
