@@ -1,7 +1,10 @@
 #!/bin/bash
 # This will backup and clean up the old backups into they synology/openshare
 # this is stored in the hosts github folder under /home/h.junaid
- 
+
+cd /home/h.junaid/github
+git pull
+
 # Set variables
 SOURCE_DIRS=("/opt" "/var/www/html" "/etc/fstab" "/etc/smbcredentials" "/var/spool/cron/crontabs/root")
 BACKUP_DIR="/backup/Backup/HomeAssistance"
