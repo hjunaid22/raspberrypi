@@ -2,7 +2,7 @@
 # This will backup and clean up the old backups into they synology/openshare
 # this is stored in the hosts github folder under /home/h.junaid
 
-cd /home/h.junaid/github
+cd /home/h.junaid/github/raspberrypi
 git pull
 
 # Set variables
