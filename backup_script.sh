@@ -1,11 +1,14 @@
 #!/bin/bash
-
+# This will backup and clean up the old backups into they synology/openshare
+# this is stored in the hosts github folder under /home/h.junaid
+ 
 # Set variables
-SOURCE_DIRS=("/opt" "/var/www/html" "/etc/fstab")
-BACKUP_DIR="/backup/backup/Raspberry_PI_HA"
+SOURCE_DIRS=("/opt" "/var/www/html" "/etc/fstab" "/etc/smbcredentials" "/var/spool/cron/crontabs/root")
+BACKUP_DIR="/backup/Backup/HomeAssistance"
 MAX_BACKUPS=5
 
 # Create backup directory if it doesn't exist
+mount -a
 mkdir -p "$BACKUP_DIR"
 
 # Create a timestamp for the backup
