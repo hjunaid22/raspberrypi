@@ -16,6 +16,6 @@ sudo echo "//192.168.1.5/Open_Share /backup cifs rw,uid=1001,gid=1001,credential
 #//192.168.1.5/Plex/Kids\040Islamic\040Cartoon /Plex cifs credentials=/etc/smbcredentials,rw,uid=1002,gid=1002
 sudo groupadd admin
 sudo usermod -aG admin h.junaid
-useradd download
+adduser download
 ######## Adding hostname ####
 ######## 
