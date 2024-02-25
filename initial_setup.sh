@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "what would you like to call this host"
+echo "What would you like to call this host"
 read "hostname"
 
 echo "alias ll=ls -al" >> /etc/profile
@@ -15,7 +15,7 @@ sudo echo "//192.168.1.5/Open_Share /backup cifs rw,uid=1001,gid=1001,credential
 ### add \040 for the space 
 #//192.168.1.5/Plex/Kids\040Islamic\040Cartoon /Plex cifs credentials=/etc/smbcredentials,rw,uid=1002,gid=1002
 sudo groupadd admin
-sudo usermod -aG admin h.junaid
+sudo usermod -aG admin junaid
 adduser download
 ######## Adding hostname ####
 ######## 
