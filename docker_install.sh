@@ -13,6 +13,8 @@ sudo apt-get update -y
 apt-get upgrade -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 docker ps
-if echo $?=127 than 
+if [ echo $?=127 ]; then 
 curl -sSL https://get.docker.com | sh
+else
+exit
 fi
